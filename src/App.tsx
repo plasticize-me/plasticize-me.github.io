@@ -1,36 +1,36 @@
 const abilities = [
   {
     title: 'Memory',
-    body: 'Short games that train recall, sequencing, and pattern retention without feeling like drills.'
+    body: 'Recall, sequencing, and pattern play.'
   },
   {
     title: 'Language',
-    body: 'Language-light exercises that build recognition, vocabulary foundations, and playful verbal thinking.'
+    body: 'Recognition, vocabulary, and verbal confidence.'
   },
   {
     title: 'Logic',
-    body: 'Visual rules, sorting, and sequencing that help children practice structured thinking through play.'
+    body: 'Rules, sorting, and structured thinking.'
   }
 ];
 
 const principles = [
-  'Built for ages 6–8 first',
-  'Designed for parents, not ad-driven engagement loops',
-  'Careful claims: practice and progress, not magic intelligence promises'
+  'Ages 6–8 first',
+  'Built for parents, not addictive loops',
+  'Measured claims, visible practice'
 ];
 
 const highlights = [
   {
-    title: 'Short sessions',
-    body: 'Easy to start. Easy to repeat. Made for real family routines.'
+    title: 'What it is',
+    body: 'Short cognitive games for children.'
   },
   {
-    title: 'Clear progress',
-    body: 'Parents should understand what was practiced and where a child is improving.'
+    title: 'Why it matters',
+    body: 'Useful play with clearer learning intent.'
   },
   {
-    title: 'Low language load',
-    body: 'Many interactions should work with minimal reading so play comes first.'
+    title: 'What parents get',
+    body: 'Simple progress they can actually read.'
   }
 ];
 
@@ -54,13 +54,13 @@ export function App() {
       <section className="hero" id="top">
         <div className="hero__copy">
           <span className="eyebrow">Children&apos;s cognitive games</span>
-          <h1>Play that helps thinking grow.</h1>
+          <h1>Play that builds thinking skills.</h1>
           <p className="hero__subline">
-            Premium, science-respecting games for children to practice memory, language, and logic.
+            Short games for memory, language, and logic — made for children and explained for parents.
           </p>
           <p className="hero__description">
-            Plasticize is building a calmer kind of children&apos;s digital play: short sessions, clear
-            progress, careful claims, and design that respects both children and parents.
+            Plasticize turns screen time into focused practice: calm sessions, low friction, and progress
+            parents can follow.
           </p>
           <div className="hero__actions">
             <a className="button button--primary" href="#contact">
@@ -71,15 +71,15 @@ export function App() {
             </a>
           </div>
           <div className="hero__trustband" aria-label="Product principles">
-            <span>Ages 6–8 first</span>
-            <span>Web-first</span>
-            <span>Parent-aware</span>
+            <span>Ages 6–8</span>
+            <span>Short sessions</span>
+            <span>Parent clarity</span>
           </div>
         </div>
 
         <aside className="hero__panel" aria-label="Plasticize overview">
           <div className="hero-visual">
-            <span className="hero-visual__badge">Future play platform</span>
+            <span className="hero-visual__badge">Web-first</span>
             <svg viewBox="0 0 520 420" role="img" aria-label="Abstract Plasticize visual">
               <defs>
                 <linearGradient id="panel" x1="0%" x2="100%" y1="0%" y2="100%">
@@ -108,24 +108,21 @@ export function App() {
             </svg>
           </div>
           <div className="hero__note">
-            <span className="hero__note-label">Positioning</span>
-            <p>
-              Not “make your child smarter.” Better: thoughtful games that help children practice core
-              thinking skills and help parents see progress more clearly.
-            </p>
+            <span className="hero__note-label">Why it feels different</span>
+            <p>No hype. Just well-designed play that helps children practice and helps parents understand.</p>
           </div>
           <div className="hero__stats">
             <div className="stat-card">
               <span className="stat-card__label">Focus</span>
-              <strong className="stat-card__value">Memory · Language · Logic</strong>
+              <strong className="stat-card__value">3 skill tracks</strong>
             </div>
             <div className="stat-card">
-              <span className="stat-card__label">Audience</span>
-              <strong className="stat-card__value">Parents first</strong>
+              <span className="stat-card__label">Sessions</span>
+              <strong className="stat-card__value">Built for quick repeats</strong>
             </div>
             <div className="stat-card">
-              <span className="stat-card__label">State</span>
-              <strong className="stat-card__value">Landing now · play later</strong>
+              <span className="stat-card__label">Parent view</span>
+              <strong className="stat-card__value">Clearer progress</strong>
             </div>
           </div>
         </aside>
@@ -134,11 +131,8 @@ export function App() {
       <section className="section-block" id="approach">
         <div className="section-block__header">
           <span className="eyebrow">Approach</span>
-          <h2>Designed with restraint.</h2>
-          <p>
-            Plasticize is for parents who want children&apos;s screen time to feel thoughtful, not noisy.
-            The product direction is simple: good games, clear learning intent, and careful language.
-          </p>
+          <h2>Informative for parents. Light for children.</h2>
+          <p>Each part of the product answers a simple question: what is being practiced, how long does it take, and what should a parent notice?</p>
         </div>
         <div className="feature-grid">
           {highlights.map((item) => (
@@ -153,12 +147,9 @@ export function App() {
       <section className="section-block section-block--split" id="skills">
         <div>
           <div className="section-block__header">
-            <span className="eyebrow">First skill tracks</span>
-            <h2>Three clear starting pillars.</h2>
-            <p>
-              The first Plasticize games are being shaped around three abilities that parents can
-              understand and children can practice through short, repeatable play.
-            </p>
+            <span className="eyebrow">Skill tracks</span>
+            <h2>Three simple areas to grow.</h2>
+            <p>Clear enough for parents to understand. Playful enough for children to repeat.</p>
           </div>
           <div className="standards-list">
             {abilities.map((ability) => (
@@ -196,7 +187,7 @@ export function App() {
           </figure>
           <div className="company-panel__content">
             <span className="eyebrow">Product rules</span>
-            <h2>What Plasticize should keep true.</h2>
+            <h2>What stays true.</h2>
             <ul className="checkpoint-list">
               {principles.map((item) => (
                 <li key={item}>{item}</li>
@@ -210,10 +201,7 @@ export function App() {
         <div>
           <span className="eyebrow">Contact</span>
           <h2>Interested early?</h2>
-          <p>
-            Plasticize is in its first shaping phase. If you care about thoughtful cognitive play for
-            children, get in touch.
-          </p>
+          <p>Want to follow the product or collaborate? Reach out.</p>
         </div>
         <a className="button button--primary" href="mailto:hello@plasticize.me">
           hello@plasticize.me
@@ -221,7 +209,7 @@ export function App() {
       </section>
 
       <footer className="footer">
-        <p>Plasticize · children&apos;s cognitive games · landing v1</p>
+        <p>Plasticize · cognitive play for children</p>
         <ul className="footer__links">
           <li>
             <a href="#top">Top</a>

@@ -3,11 +3,12 @@ import '@testing-library/jest-dom';
 import { App } from './App';
 
 describe('Plasticize landing page', () => {
-  it('renders the main positioning copy', () => {
+  it('renders the refined positioning copy', () => {
     render(<App />);
 
-    expect(screen.getByRole('heading', { name: /play that helps thinking grow/i })).toBeInTheDocument();
-    expect(screen.getByText(/memory, language, and logic/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /play that builds thinking skills/i })).toBeInTheDocument();
+    expect(screen.getByText(/short games for memory, language, and logic/i)).toBeInTheDocument();
+    expect(screen.getByText(/informative for parents\. light for children/i)).toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: /contact us/i })).toHaveLength(2);
   });
 });
