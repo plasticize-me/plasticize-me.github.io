@@ -3,18 +3,22 @@ import '@testing-library/jest-dom';
 import { App } from './App';
 
 describe('Plasticize landing page', () => {
-  it('renders the redesigned hero and parent-facing positioning', () => {
+  it('renders the landing structure based on the supplied visual direction', () => {
     render(<App />);
 
     expect(
-      screen.getByRole('heading', { name: /play that looks joyful and feels intentional/i })
+      screen.getByRole('heading', { name: /play that builds thinking and still looks beautiful/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/plasticize turns memory, language, and logic practice into calm web-first play/i)
+      screen.getByText(/this landing direction follows the supplied mock more closely/i)
     ).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /three skill tracks with one visual language/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /what should be obvious in seconds/i })).toBeInTheDocument();
-    expect(screen.getByText(/specific skills instead of vague brain-training claims/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /one focused challenge at a time/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        name: /the landing should feel like a designed product brand, not a generic app template/i
+      })
+    ).toBeInTheDocument();
+    expect(screen.getByText(/specific cognitive skills, not vague intelligence claims/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /request early access/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /hello@plasticize\.me/i })).toBeInTheDocument();
   });

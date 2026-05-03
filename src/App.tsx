@@ -1,63 +1,61 @@
-const navItems = ['Overview', 'Programs', 'Progress', 'Contact'];
+const navItems = ['Home', 'Products', 'Resources', 'Contact'];
 
-const stats = [
-  { label: 'Weekly streak', value: '12 days' },
-  { label: 'Skill focus', value: 'Memory · Logic' },
-  { label: 'Session length', value: '8 min avg' }
+const trustStats = [
+  { label: 'Sessions', value: '5–10 min' },
+  { label: 'Age range', value: '6–8 first' },
+  { label: 'Parent view', value: 'Clear recap' }
 ];
 
-const lessonCards = [
+const orbitCards = [
   {
-    eyebrow: 'Today',
-    title: 'Pattern Memory',
-    body: 'A calm visual-sequencing game with guided difficulty and simple spoken prompts.'
+    title: 'Memory track',
+    body: 'Short visual recall rounds with guided pacing.',
+    tone: 'violet'
   },
   {
-    eyebrow: 'Parents see',
-    title: 'Clear progress summaries',
-    body: 'Accuracy, repetition, and confidence are surfaced without noisy game mechanics.'
+    title: 'Language track',
+    body: 'Listening and vocabulary play with low reading load.',
+    tone: 'blue'
+  },
+  {
+    title: 'Logic track',
+    body: 'Pattern sorting and rules-based challenges.',
+    tone: 'dark'
   }
 ];
 
-const pillars = [
+const featurePanels = [
   {
-    title: 'Memory',
-    body: 'Fast-repeat exercises for recall, sequencing, and visual retention.'
+    eyebrow: 'Why it feels premium',
+    title: 'One focused challenge at a time',
+    body: 'The mock points toward a calm, editorial landing page: oversized typography, soft gradients, and a product preview that feels curated rather than gamey.'
   },
   {
-    title: 'Language',
-    body: 'Word recognition and listening confidence with intentionally light reading load.'
-  },
-  {
-    title: 'Logic',
-    body: 'Sorting, matching, and rules-based play presented through approachable puzzles.'
+    eyebrow: 'Why parents trust it',
+    title: 'Specific practice, visible value',
+    body: 'Plasticize should communicate skill-specific play, careful product framing, and parent-readable progress instead of noisy engagement mechanics.'
   }
 ];
 
-const parentSignals = [
-  'Specific skills instead of vague brain-training claims',
-  'Short sessions children can revisit without friction',
-  'Premium presentation with calm, readable progress signals'
-];
-
-const timeline = [
-  { step: '01', title: 'Warm-up', detail: 'Simple recognition to build confidence quickly.' },
-  { step: '02', title: 'Focus challenge', detail: 'One clear task with adaptive difficulty.' },
-  { step: '03', title: 'Parent recap', detail: 'Useful takeaways after the session ends.' }
+const signals = [
+  'Specific cognitive skills, not vague intelligence claims',
+  'Web-first product with a calm, modern visual system',
+  'Short repeatable sessions children can return to often',
+  'Parent-facing summaries that stay legible at a glance'
 ];
 
 export function App() {
   return (
     <main className="page-shell">
-      <section className="hero-frame" id="top">
-        <header className="topbar">
-          <a className="brand" href="#top" aria-label="Plasticize home">
+      <section className="landing-frame">
+        <header className="topbar" id="home">
+          <a className="brand" href="#home" aria-label="Plasticize home">
             <span className="brand__mark" aria-hidden="true">
               P
             </span>
-            <span className="brand__text">
+            <span className="brand__copy">
               <strong>Plasticize</strong>
-              <span>Cognitive play, carefully designed</span>
+              <span>Cognitive play for children</span>
             </span>
           </a>
 
@@ -70,152 +68,119 @@ export function App() {
           </nav>
 
           <a className="button button--ghost" href="#contact">
-            Contact us
+            Get in touch
           </a>
         </header>
 
-        <div className="hero-layout">
-          <section className="hero-copy" id="overview">
-            <span className="eyebrow">Premium cognitive games for children ages 6–8</span>
-            <h1>Play that looks joyful and feels intentional.</h1>
+        <section className="hero-grid">
+          <div className="hero-copy">
+            <span className="eyebrow">Premium landing concept for the Plasticize product</span>
+            <h1>Play that builds thinking and still looks beautiful.</h1>
             <p className="hero-copy__lead">
-              Plasticize turns memory, language, and logic practice into calm web-first play with a
-              parent view that stays clear.
+              Plasticize turns memory, language, and logic practice into a calm web-first experience
+              for children, with a parent view that stays clear.
             </p>
             <p className="hero-copy__body">
-              The product is designed to feel more like a polished learning companion than a noisy
-              arcade. Children get one focused task at a time. Parents get useful visibility after
-              each session.
+              This landing direction follows the supplied mock more closely: oversized headline,
+              atmospheric gradients, layered product cards, and a cleaner premium composition.
             </p>
 
-            <div className="hero-copy__actions">
+            <div className="hero-actions">
               <a className="button button--primary" href="mailto:hello@plasticize.me">
                 Request early access
               </a>
-              <a className="button button--secondary" href="#programs">
-                Explore the product
+              <a className="button button--secondary" href="#products">
+                View product direction
               </a>
             </div>
 
-            <dl className="stat-row" aria-label="Plasticize product highlights">
-              {stats.map((item) => (
-                <div className="stat-pill" key={item.label}>
+            <dl className="stat-grid" aria-label="Plasticize highlights">
+              {trustStats.map((item) => (
+                <div className="stat-chip" key={item.label}>
                   <dt>{item.label}</dt>
                   <dd>{item.value}</dd>
                 </div>
               ))}
             </dl>
-          </section>
+          </div>
 
-          <aside className="hero-visual" aria-label="Plasticize interface preview">
-            <div className="device-card">
-              <div className="device-card__topline">
-                <span>Session overview</span>
-                <span>Web-first</span>
+          <aside className="hero-visual" aria-label="Plasticize visual concept">
+            <div className="showcase-card">
+              <div className="showcase-card__topline">
+                <span>Product concept</span>
+                <span>Landing preview</span>
               </div>
 
-              <div className="device-card__hero">
-                <div>
+              <div className="orbit-stage" aria-hidden="true">
+                <div className="orbit-stage__halo orbit-stage__halo--outer" />
+                <div className="orbit-stage__halo orbit-stage__halo--inner" />
+                <div className="orbit-stage__core">
+                  <span className="orbit-stage__label">Plasticize</span>
+                  <strong>Memory · Language · Logic</strong>
+                </div>
+                <article className="floating-card floating-card--top">
                   <span className="mini-eyebrow">Today&apos;s focus</span>
-                  <h2>Pattern Memory</h2>
-                  <p>Short rounds, guided pacing, and calm feedback for repeat play.</p>
-                </div>
-                <div className="device-score">
-                  <span>Progress</span>
+                  <strong>Pattern memory</strong>
+                  <p>8-minute guided practice</p>
+                </article>
+                <article className="floating-card floating-card--right">
+                  <span className="mini-eyebrow">Progress</span>
                   <strong>82%</strong>
-                </div>
+                  <p>calm feedback loop</p>
+                </article>
+                <article className="floating-card floating-card--bottom">
+                  <span className="mini-eyebrow">Parent summary</span>
+                  <strong>Clear after play</strong>
+                  <p>recall speed · pattern accuracy</p>
+                </article>
               </div>
 
-              <div className="device-card__track" aria-hidden="true">
-                <span className="device-card__track-fill" />
-              </div>
-
-              <div className="lesson-grid">
-                {lessonCards.map((card) => (
-                  <article className="lesson-card" key={card.title}>
-                    <span className="mini-eyebrow">{card.eyebrow}</span>
-                    <h3>{card.title}</h3>
+              <div className="track-grid">
+                {orbitCards.map((card) => (
+                  <article className={`track-card track-card--${card.tone}`} key={card.title}>
+                    <h2>{card.title}</h2>
                     <p>{card.body}</p>
                   </article>
                 ))}
               </div>
-
-              <div className="device-card__footer">
-                <div>
-                  <span className="mini-eyebrow">Design rule</span>
-                  <strong>Useful, not noisy</strong>
-                </div>
-                <div className="orbital-group" aria-hidden="true">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-              </div>
             </div>
           </aside>
-        </div>
+        </section>
       </section>
 
-      <section className="content-grid" id="programs">
-        <article className="panel panel--wide">
-          <div className="panel__header">
-            <span className="eyebrow">Programs</span>
-            <h2>Three skill tracks with one visual language.</h2>
-          </div>
-
-          <div className="pillar-grid">
-            {pillars.map((pillar) => (
-              <article className="pillar-card" key={pillar.title}>
-                <span className="pillar-card__index">{pillar.title.slice(0, 1)}</span>
-                <h3>{pillar.title}</h3>
-                <p>{pillar.body}</p>
-              </article>
-            ))}
-          </div>
-        </article>
-
-        <article className="panel" id="progress">
-          <div className="panel__header">
-            <span className="eyebrow">Parent view</span>
-            <h2>What should be obvious in seconds.</h2>
-          </div>
-
-          <ul className="signal-list">
-            {parentSignals.map((signal) => (
-              <li key={signal}>{signal}</li>
-            ))}
-          </ul>
-        </article>
+      <section className="panel-grid" id="products">
+        {featurePanels.map((panel) => (
+          <article className="feature-panel" key={panel.title}>
+            <span className="eyebrow">{panel.eyebrow}</span>
+            <h2>{panel.title}</h2>
+            <p>{panel.body}</p>
+          </article>
+        ))}
       </section>
 
-      <section className="timeline-panel">
-        <div className="panel__header timeline-panel__header">
-          <div>
-            <span className="eyebrow">Flow</span>
-            <h2>A session structure that feels premium and calm.</h2>
-          </div>
+      <section className="signal-panel" id="resources">
+        <div className="signal-panel__copy">
+          <span className="eyebrow">Product principles</span>
+          <h2>The landing should feel like a designed product brand, not a generic app template.</h2>
           <p>
-            The interface direction is built around one focused challenge, low reading load, and a
-            parent-facing recap that makes the value legible.
+            The strongest cues in the mock are composition and mood: deep indigo background,
+            luminous cards, generous spacing, and a hero section that sells confidence before it
+            explains details.
           </p>
         </div>
 
-        <div className="timeline-grid">
-          {timeline.map((item) => (
-            <article className="timeline-card" key={item.step}>
-              <span className="timeline-card__step">{item.step}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
+        <ul className="signal-list">
+          {signals.map((signal) => (
+            <li key={signal}>{signal}</li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section className="contact-panel" id="contact">
         <div>
           <span className="eyebrow">Contact</span>
-          <h2>Want to see the early product direction?</h2>
-          <p>Reach out to review the product, follow the build, or discuss collaboration.</p>
+          <h2>Want the next pass even tighter to the mock?</h2>
+          <p>Send another reference or annotated notes and I can keep iterating from this base.</p>
         </div>
         <a className="button button--primary" href="mailto:hello@plasticize.me">
           hello@plasticize.me
