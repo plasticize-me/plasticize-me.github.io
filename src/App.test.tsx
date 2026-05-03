@@ -3,23 +3,21 @@ import '@testing-library/jest-dom';
 import { App } from './App';
 
 describe('Plasticize landing page', () => {
-  it('renders the landing structure based on the supplied visual direction', () => {
+  it('renders the redesigned homepage content', () => {
     render(<App />);
 
     expect(
-      screen.getByRole('heading', { name: /play that builds thinking and still looks beautiful/i })
+      screen.getByRole('heading', { name: /thoughtful cognitive games for growing minds/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/this landing direction follows the supplied mock more closely/i)
+      screen.getByText(/science-respecting cognitive games for children/i)
     ).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /one focused challenge at a time/i })).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', {
-        name: /the landing should feel like a designed product brand, not a generic app template/i
-      })
-    ).toBeInTheDocument();
-    expect(screen.getByText(/specific cognitive skills, not vague intelligence claims/i)).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /request early access/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /hello@plasticize\.me/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /explore games/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /see progress demo/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^memory$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /built with care, not hype/i })).toBeInTheDocument();
+    expect(screen.getByText(/alex's progress overview/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /how it works/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /start with plasticize/i })).toBeInTheDocument();
   });
 });
