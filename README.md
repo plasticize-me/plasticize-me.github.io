@@ -1,6 +1,8 @@
-# Plasticize website
+# Plasticize website (old)
 
-Public landing page for Plasticize.
+The old public site at `plasticize-me.github.io`. It now only points visitors to the new landing
+page (`plasticize-landing`) and the app. Archive this repository once the new site is live on its
+own domain.
 
 ## Scripts
 
@@ -8,6 +10,11 @@ Public landing page for Plasticize.
 - `npm test`
 - `npm run build`
 - `npm run dev`
+
+## Configuration
+
+- `VITE_PLASTICIZE_LANDING_URL` – new landing page (default `https://plasticize.ir/`).
+- `VITE_PLASTICIZE_APP_URL` – app origin (default `https://app.plasticize.ir/`).
 
 ## Deployment
 
